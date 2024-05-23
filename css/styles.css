@@ -102,7 +102,7 @@ body {
   }
   
   .project-item {
-    width: 300px;
+    width: 100%;
     margin: 1rem;
     overflow: hidden;
     border-radius: 8px;
