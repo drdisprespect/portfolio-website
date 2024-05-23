@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 Details</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
+      <ul class="header-list">
+        <li class="header-content hp-viewport"><a href="../index.html#home">Home</a></li>
+        <li class="header-content hp-viewport"><a href="../index.html#about">About</a></li>
+        <li class="header-content hp-viewport"><a href="../index.html#projects">Projects</a></li>
+        <li class="header-content hp-viewport"><a href="../index.html#resume">Resume</a></li>
+        <li class="header-content hp-viewport"><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="project-details" class="full-height" data-aos="fade-up">
+      <div class="container">
+        <h2>Machine Learning Pipeline for Loan Default Prediction</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../images/project2/img1.png" alt="Project 2 Image 1"></div>
+            <div class="swiper-slide"><img src="../images/project2/img2.jpeg" alt="Project 2 Image 2"></div>
+            <div class="swiper-slide"><img src="../images/project2/img3.jpg" alt="Project 2 Image 3"></div>
+            <div class="swiper-slide"><img src="../images/project2/img4.png" alt="Project 2 Image 4"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <p><strong>Project Details:</strong></p>
+        <ul>
+          <li>Engineered an advanced machine learning pipeline to predict loan defaults, integrating sophisticated Python libraries and robust data processing techniques.</li>
+          <li>Constructed and fine-tuned ensemble models, including XGBoost, Random Forest, and Ridge Regression, utilizing RandomizedSearchCV for hyperparameter optimization to achieve superior predictive performance.</li>
+          <li>Developed a neural network model using PyTorch to enhance predictive capabilities, leveraging deep learning techniques for improved accuracy.</li>
+          <li>Executed feature scaling and dimensionality reduction through Principal Component Analysis (PCA) and KMeans clustering, optimizing model efficiency and interpretability.</li>
+          <li>Deployed various regression diagnostics and performance metrics, including Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), R-squared (R²), and Mean Absolute Percentage Error (MAPE), ensuring comprehensive model evaluation.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init();
+
+    // Initialize Swiper for project image carousels
+    new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <div id="background-animation"></div>
   <header>
     <div class="header-wrapper">
       <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
@@ -52,7 +53,7 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="project-grid">
-          <div class="project-item">
+          <div class="project-item" onclick="location.href='project-details/project1.html';">
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="images/project1/img1.png" alt="Project 1 Image 1"></div>
@@ -72,7 +73,7 @@
               <li>Utilized CSS animations and JavaScript event handling to elevate interactivity for modern web aesthetics and user-centric design principles.</li>
             </ul>
           </div>
-          <div class="project-item">
+          <div class="project-item" onclick="location.href='project-details/project2.html';">
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="images/project2/img1.png" alt="Project 2 Image 1"></div>
@@ -147,21 +148,29 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
+    // Initialize AOS
     AOS.init();
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+
+    // Initialize Swiper for project image carousels
+    const swipers = document.querySelectorAll('.swiper-container');
+    swipers.forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     });
 
+    // Search dropdown toggle functionality
     const searchIcon = document.getElementById('searchIcon');
     const searchDropdown = document.getElementById('searchDropdown');
+
     searchIcon.addEventListener('click', function() {
       if (searchDropdown.style.display === 'none' || searchDropdown.style.display === '') {
         searchDropdown.style.display = 'block';
@@ -169,6 +178,25 @@
         searchDropdown.style.display = 'none';
       }
     });
+
+    // Real-time background animation
+    const backgroundAnimation = document.getElementById('background-animation');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const xy = getRandomPosition();
+      star.style.top = `${xy[0]}px`;
+      star.style.left = `${xy[1]}px`;
+      backgroundAnimation.appendChild(star);
+    }
+
+    function getRandomPosition() {
+      const y = window.innerWidth;
+      const x = window.innerHeight;
+      const randomX = Math.floor(Math.random() * x);
+      const randomY = Math.floor(Math.random() * y);
+      return [randomX, randomY];
+    }
   </script>
 </body>
 </html>
