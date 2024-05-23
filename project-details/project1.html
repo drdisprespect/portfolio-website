@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 1 Details</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project-details.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
     <div class="header-wrapper">
-      <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
       <ul class="header-list">
-        <li class="header-content hp-viewport"><a href="../index.html#home">Home</a></li>
-        <li class="header-content hp-viewport"><a href="../index.html#about">About</a></li>
-        <li class="header-content hp-viewport"><a href="../index.html#projects">Projects</a></li>
-        <li class="header-content hp-viewport"><a href="../index.html#resume">Resume</a></li>
-        <li class="header-content hp-viewport"><a href="../index.html#contact">Contact</a></li>
+        <li class="header-content"><a href="../index.html#home">Home</a></li>
+        <li class="header-content"><a href="../index.html#about">About</a></li>
+        <li class="header-content"><a href="../index.html#projects">Projects</a></li>
+        <li class="header-content"><a href="../index.html#resume">Resume</a></li>
+        <li class="header-content"><a href="../index.html#contact">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -48,12 +48,8 @@
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    // Initialize AOS
-    AOS.init();
-
     // Initialize Swiper for project image carousels
     new Swiper('.swiper-container', {
       loop: true,
