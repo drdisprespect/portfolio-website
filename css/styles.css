@@ -119,19 +119,18 @@ body {
     padding: 0 2rem;
   }
   
-  .project-grid {
+  .project-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 2rem;
-    flex-wrap: wrap;
   }
   
-  .project-item {
-    width: 100%;
-    margin: 1rem;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .project {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
   }
   
   .swiper-container {
@@ -147,10 +146,24 @@ body {
   }
   
   .project-description {
-    padding: 1rem;
+    flex: 1;
+  }
+  
+  .project-description ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project-description ul li {
+    margin-bottom: 1rem;
     background-color: #1d1d1f;
+    padding: 1rem;
     border-radius: 8px;
-    margin-top: -8px;
+  }
+  
+  .resume-download {
+    color: #f5f5f7;
+    text-decoration: underline;
   }
   
   form {
@@ -203,11 +216,6 @@ body {
   }
   
   .footer-list p a:hover {
-    text-decoration: underline;
-  }
-  
-  .resume-download {
-    color: #f5f5f7;
     text-decoration: underline;
   }
   
