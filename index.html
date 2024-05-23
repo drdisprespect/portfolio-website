@@ -5,22 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
     <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>This is a section about me.</p>
+  <section id="home" class="full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Explore my work and projects.</p>
+    </div>
   </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>This is a section for my projects.</p>
+  <section id="about" class="full-height" data-aos="fade-right">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>This is a section about me.</p>
+    </div>
   </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>This is a section to contact me.</p>
+  <section id="projects" class="full-height" data-aos="fade-left">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/project1/img1.jpg" alt="Project 1 Image 1"></div>
+              <div class="swiper-slide"><img src="images/project1/img2.jpg" alt="Project 1 Image 2"></div>
+              <div class="swiper-slide"><img src="images/project1/img3.jpg" alt="Project 1 Image 3"></div>
+              <div class="swiper-slide"><img src="images/project1/img4.jpg" alt="Project 1 Image 4"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <p>Project 1 Description</p>
+        </div>
+        <div class="project-item">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/project2/img1.jpg" alt="Project 2 Image 1"></div>
+              <div class="swiper-slide"><img src="images/project2/img2.jpg" alt="Project 2 Image 2"></div>
+              <div class="swiper-slide"><img src="images/project2/img3.jpg" alt="Project 2 Image 3"></div>
+              <div class="swiper-slide"><img src="images/project2/img4.jpg" alt="Project 2 Image 4"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <p>Project 2 Description</p>
+        </div>
+      </div>
+    </div>
   </section>
+  <section id="resume" class="full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>Resume</h2>
+      <a href="resume/resume.pdf" download>Download My Resume</a>
+    </div>
+  </section>
+  <section id="contact" class="full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="contact.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>
