@@ -119,6 +119,10 @@ body {
     padding: 0 2rem;
   }
   
+  .section {
+    padding: 100px 0;
+  }
+  
   .project-wrapper {
     display: flex;
     flex-direction: column;
