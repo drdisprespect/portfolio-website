@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background: #333;
+    background: rgba(0, 0, 0, 0.92);
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -17,26 +17,68 @@ body {
     z-index: 1000;
   }
   
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   
-  nav ul li {
+  .header-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .header-list li {
     display: inline;
     margin: 0 10px;
   }
   
-  nav ul li a {
-    color: #fff;
+  .header-list li a {
+    color: #f5f5f7;
     text-decoration: none;
     font-weight: bold;
   }
   
-  section {
-    padding: 2rem;
-    text-align: center;
+  .logo {
+    width: 25px;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-dropdown input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .search-dropdown button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  .search-dropdown button:hover {
+    background-color: #555;
   }
   
   .full-height {
@@ -104,5 +146,31 @@ body {
   
   form button:hover {
     background: #555;
+  }
+  
+  footer {
+    background-color: #f5f5f7;
+    padding: 40px;
+    color: #1d1d1f;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-list {
+    width: 30%;
+  }
+  
+  .footer-list p a {
+    color: #1d1d1f;
+  }
+  
+  .footer-list p a:hover {
+    text-decoration: underline;
   }
   

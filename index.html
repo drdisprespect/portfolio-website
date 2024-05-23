@@ -7,84 +7,163 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
   <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <div class="header-wrapper">
+      <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
+      <ul class="header-list">
+        <li class="header-content hp-viewport apple-header"><a href="#"><img class="logo" src="images/apple-logo.png"></a></li>
+        <li class="header-content hp-viewport-hide"><a href="#about">About</a></li>
+        <li class="header-content hp-viewport-hide"><a href="#projects">Projects</a></li>
+        <li class="header-content hp-viewport-hide"><a href="#resume">Resume</a></li>
+        <li class="header-content hp-viewport-hide"><a href="#contact">Contact</a></li>
+        <li class="header-content hp-viewport-hide fa-searchs"><a href="#" class="fas fa-search"></a></li>
+        <li>
+          <div class="search search-container">
+            <div class="search-icon" id="searchIcon"><i class="fas fa-search"></i></div>
+            <div class="search-dropdown" id="searchDropdown">
+              <input type="text" placeholder="Search...">
+              <button>Search</button>
+            </div>
+          </div>
+        </li>
+        <li class="header-content hp-viewport header-shopping"><a href="#" class="fas fa-shopping-bag"></a></li>
       </ul>
-    </nav>
+    </div>
   </header>
-  <section id="home" class="full-height" data-aos="fade-up">
-    <div class="container">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Explore my work and projects.</p>
-    </div>
-  </section>
-  <section id="about" class="full-height" data-aos="fade-right">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>This is a section about me.</p>
-    </div>
-  </section>
-  <section id="projects" class="full-height" data-aos="fade-left">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-item">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="images/project1/img1.jpg" alt="Project 1 Image 1"></div>
-              <div class="swiper-slide"><img src="images/project1/img2.jpg" alt="Project 1 Image 2"></div>
-              <div class="swiper-slide"><img src="images/project1/img3.jpg" alt="Project 1 Image 3"></div>
-              <div class="swiper-slide"><img src="images/project1/img4.jpg" alt="Project 1 Image 4"></div>
+
+  <main>
+    <section id="home" class="full-height" data-aos="fade-up">
+      <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my work and projects.</p>
+      </div>
+    </section>
+
+    <section id="about" class="full-height" data-aos="fade-right">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>This is a section about me.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="full-height" data-aos="fade-left">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/project1/img1.jpg" alt="Project 1 Image 1"></div>
+                <div class="swiper-slide"><img src="images/project1/img2.jpg" alt="Project 1 Image 2"></div>
+                <div class="swiper-slide"><img src="images/project1/img3.jpg" alt="Project 1 Image 3"></div>
+                <div class="swiper-slide"><img src="images/project1/img4.jpg" alt="Project 1 Image 4"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <p><strong>AI Chatbot Web Development (Individual Project Hackathon)</strong></p>
+            <ul>
+              <li>Engineered a Flask-based, OpenAI GPT-3.5 integrated chatbot, showcasing adeptness in full-stack development and NLP API integration for real-time, intelligent user interactions.</li>
+              <li>Implemented a dynamic, responsive frontend using advanced HTML and CSS techniques, enhanced with JavaScript for real-time DOM updates, ensuring an engaging UX across devices.</li>
+              <li>Leveraged Flask for efficient backend routing and server-side logic, with Python scripts handling API communication, showcasing proficiency in backend architecture and performance optimization.</li>
+              <li>Utilized CSS animations and JavaScript event handling to elevate interactivity for modern web aesthetics and user-centric design principles.</li>
+            </ul>
           </div>
-          <p>Project 1 Description</p>
-        </div>
-        <div class="project-item">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="images/project2/img1.jpg" alt="Project 2 Image 1"></div>
-              <div class="swiper-slide"><img src="images/project2/img2.jpg" alt="Project 2 Image 2"></div>
-              <div class="swiper-slide"><img src="images/project2/img3.jpg" alt="Project 2 Image 3"></div>
-              <div class="swiper-slide"><img src="images/project2/img4.jpg" alt="Project 2 Image 4"></div>
+          <div class="project-item">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/project2/img1.jpg" alt="Project 2 Image 1"></div>
+                <div class="swiper-slide"><img src="images/project2/img2.jpg" alt="Project 2 Image 2"></div>
+                <div class="swiper-slide"><img src="images/project2/img3.jpg" alt="Project 2 Image 3"></div>
+                <div class="swiper-slide"><img src="images/project2/img4.jpg" alt="Project 2 Image 4"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <p><strong>Machine Learning Pipeline for Loan Default Prediction</strong></p>
+            <ul>
+              <li>Engineered an advanced machine learning pipeline to predict loan defaults, integrating sophisticated Python libraries and robust data processing techniques.</li>
+              <li>Constructed and fine-tuned ensemble models, including XGBoost, Random Forest, and Ridge Regression, utilizing RandomizedSearchCV for hyperparameter optimization to achieve superior predictive performance.</li>
+              <li>Developed a neural network model using PyTorch to enhance predictive capabilities, leveraging deep learning techniques for improved accuracy.</li>
+              <li>Executed feature scaling and dimensionality reduction through Principal Component Analysis (PCA) and KMeans clustering, optimizing model efficiency and interpretability.</li>
+              <li>Deployed various regression diagnostics and performance metrics, including Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), R-squared (R²), and Mean Absolute Percentage Error (MAPE), ensuring comprehensive model evaluation.</li>
+            </ul>
           </div>
-          <p>Project 2 Description</p>
         </div>
       </div>
+    </section>
+
+    <section id="resume" class="full-height" data-aos="fade-up">
+      <div class="container">
+        <h2>Resume</h2>
+        <a href="resume/resume.pdf" download>Download My Resume</a>
+      </div>
+    </section>
+
+    <section id="contact" class="full-height" data-aos="fade-up">
+      <div class="container">
+        <h2>Contact</h2>
+        <form action="contact.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-list">
+        <h3>Shop and Learn</h3>
+        <p><a href="#">Mac</a></p>
+        <p><a href="#">iPad</a></p>
+        <p><a href="#">iPhone</a></p>
+        <p><a href="#">Watch</a></p>
+        <p><a href="#">TV</a></p>
+        <p><a href="#">Music</a></p>
+        <p><a href="#">AirPods</a></p>
+        <p><a href="#">HomePod</a></p>
+        <p><a href="#">iPod touch</a></p>
+        <p><a href="#">Accessories</a></p>
+        <p><a href="#">Gift Cards</a></p>
+      </div>
+      <div class="footer-list">
+        <h3>Services</h3>
+        <p><a href="#">Apple Music</a></p>
+        <p><a href="#">Apple TV+</a></p>
+        <p><a href="#">Apple Fitness+</a></p>
+        <p><a href="#">Apple News+</a></p>
+        <p><a href="#">Apple Arcade</a></p>
+        <p><a href="#">iCloud</a></p>
+        <p><a href="#">Apple One</a></p>
+        <p><a href="#">Apple Card</a></p>
+        <p><a href="#">Apple Books</a></p>
+        <p><a href="#">App Store</a></p>
+      </div>
+      <div class="footer-list">
+        <h3>Apple Store</h3>
+        <p><a href="#">Find a Store</a></p>
+        <p><a href="#">Shop Online</a></p>
+        <p><a href="#">Genius Bar</a></p>
+        <p><a href="#">Today at Apple</a></p>
+        <p><a href="#">Apple Camp</a></p>
+        <p><a href="#">Apple Store App</a></p>
+        <p><a href="#">Refurbished and Clearance</a></p>
+        <p><a href="#">Financing</a></p>
+        <p><a href="#">Apple Trade In</a></p>
+        <p><a href="#">Order Status</a></p>
+        <p><a href="#">Shopping Help</a></p>
+      </div>
     </div>
-  </section>
-  <section id="resume" class="full-height" data-aos="fade-up">
-    <div class="container">
-      <h2>Resume</h2>
-      <a href="resume/resume.pdf" download>Download My Resume</a>
-    </div>
-  </section>
-  <section id="contact" class="full-height" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="contact.php" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
@@ -99,6 +178,16 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+    });
+
+    const searchIcon = document.getElementById('searchIcon');
+    const searchDropdown = document.getElementById('searchDropdown');
+    searchIcon.addEventListener('click', function() {
+      if (searchDropdown.style.display === 'none' || searchDropdown.style.display === '') {
+        searchDropdown.style.display = 'block';
+      } else {
+        searchDropdown.style.display = 'none';
+      }
     });
   </script>
 </body>
