@@ -101,7 +101,7 @@
     <section id="resume" class="full-height" data-aos="fade-up">
       <div class="container">
         <h2>Resume</h2>
-        <a href="resume/resume.pdf" download>Download My Resume</a>
+        <a href="resume/resume.pdf" download class="resume-download">Download My Resume</a>
       </div>
     </section>
 
@@ -197,6 +197,13 @@
       const randomY = Math.floor(Math.random() * y);
       return [randomX, randomY];
     }
+
+    // Update background animation on scroll
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.star').forEach(star => {
+        star.style.transform = `translateY(${window.scrollY * 0.5}px)`;
+      });
+    });
   </script>
 </body>
 </html>
